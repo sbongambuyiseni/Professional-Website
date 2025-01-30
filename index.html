@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mbuyiseni Cele - IT Support Technician & Web Developer Portfolio">
+    <title>Mbuyiseni Cele - IT Support & Web Developer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="C:\Users\Biztech\Downloads\Professional-Website\portfolio-website\assets\images\favicon.webp">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            try {
+                // Use your actual public key
+                emailjs.init("49Ivl7suOEKDYnMuQ");
+                console.log("EmailJS initialized successfully");
+            } catch (error) {
+                console.error("EmailJS initialization error:", error);
+            }
+        })();
+    </script>
+</head>
+<body class="font-['Poppins'] bg-slate-900">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-slate-800/90 backdrop-blur-sm shadow-lg z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="C:\Users\Biztech\Downloads\Professional-Website\portfolio-website\assets\icons\logo.jpg" alt="Logo" class="w-8 h-8">
+                <span class="text-2xl font-bold text-cyan-400">MC</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-300 hover:text-cyan-400 transition">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-cyan-400 transition">About</a>
+                <a href="#services" class="text-gray-300 hover:text-cyan-400 transition">Services</a>
+                <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition">Projects</a>
+                <a href="#blog" class="text-gray-300 hover:text-cyan-400 transition">Blog</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-cyan-400 transition">Testimonials</a>
+                <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu absolute w-full bg-slate-800 shadow-lg md:hidden">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#home" class="text-gray-300 hover:text-cyan-400">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-cyan-400">About</a>
+                <a href="#services" class="text-gray-300 hover:text-cyan-400">Services</a>
+                <a href="#projects" class="text-gray-300 hover:text-cyan-400">Projects</a>
+                <a href="#blog" class="text-gray-300 hover:text-cyan-400">Blog</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-cyan-400">Testimonials</a>
+                <a href="#contact" class="text-gray-300 hover:text-cyan-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3b82f6,transparent)]"></div>
+        <div class="text-center text-white relative z-10 px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">Hi, I'm Mbuyiseni Cele</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in text-gray-300">IT Support Technician & Web Developer</p>
+            <p class="text-lg md:text-xl mb-8 animate-fade-in text-gray-400">Your trusted partner in technology solutions.</p>
+            <div class="space-x-4">
+                <a href="C:\Users\Biztech\Downloads\Professional-Website\portfolio-website\assets\docs\mbuyiseni-cele-cv.pdf" target="_blank" 
+                   class="bg-cyan-500 text-white px-6 py-3 rounded-full hover:bg-cyan-600 transition hover-scale">
+                    Download CV
+                </a>
+                <a href="#contact" 
+                   class="border-2 border-cyan-500 text-cyan-400 px-6 py-3 rounded-full hover:bg-cyan-500 hover:text-white transition hover-scale">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-slate-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/3">
+                    <img src="C:\Users\Biztech\Downloads\Professional-Website\portfolio-website\assets\images\profile-photo.webp" alt="Mbuyiseni Cele" 
+                         class="rounded-lg shadow-lg w-full hover-scale">
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-gray-300 mb-6">
+                        I'm a passionate IT Support Technician and Web Developer with experience in building websites
+                        and providing technical support. My journey in technology has equipped me with diverse skills
+                        in both hardware and software solutions.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="bg-slate-700 p-4 rounded-lg hover-scale">
+                            <i class="fas fa-laptop-code text-cyan-400 text-2xl mb-2"></i>
+                            <h3 class="font-semibold mb-2">Web Development</h3>
+                            <p class="text-sm text-gray-300">Frontend & Backend solutions</p>
+                        </div>
+                        <div class="bg-slate-700 p-4 rounded-lg hover-scale">
+                            <i class="fas fa-tools text-cyan-400 text-2xl mb-2"></i>
+                            <h3 class="font-semibold mb-2">IT Support</h3>
+                            <p class="text-sm text-gray-300">Hardware & Software troubleshooting</p>
+                        </div>
+                        <div class="bg-slate-700 p-4 rounded-lg hover-scale">
+                            <i class="fas fa-mobile-alt text-cyan-400 text-2xl mb-2"></i>
+                            <h3 class="font-semibold mb-2">Responsive Design</h3>
+                            <p class="text-sm text-gray-300">Mobile-first approach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-slate-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">What I Do</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Workstation Setup -->
+                <div class="service-card bg-slate-700 p-6 rounded-lg hover-scale">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-desktop text-3xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Workstation Setup</h3>
+                    <p class="text-gray-300">Expert configuration of workstations for optimal performance, including software installation, security setup, and user account management.</p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-cyan-400 mr-2"></i>
+                            System optimization
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-cyan-400 mr-2"></i>
+                            Software deployment
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Network Troubleshooting -->
+                <div class="service-card bg-slate-700 p-6 rounded-lg hover-scale">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-network-wired text-3xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Network Troubleshooting</h3>
+                    <p class="text-gray-300">Comprehensive diagnosis and resolution of network connectivity issues, ensuring seamless communication across departments.</p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-cyan-400 mr-2"></i>
+                            Connection diagnostics
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-cyan-400 mr-2"></i>
+                            Network optimization
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Hardware & Software Upgrades -->
+                <div class="service-card bg-slate-700 p-6 rounded-lg hover-scale">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-microchip text-3xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hardware & Software Upgrades</h3>
+                    <p class="text-gray-300">Strategic implementation of system upgrades to enhance performance and functionality while minimizing downtime.</p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-cyan-400 mr-2"></i>
+                            Hardware assessment
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-cyan-400 mr-2"></i>
+                            Software updates
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Data Backup & Recovery -->
+                <div class="service-card bg-slate-700 p-6 rounded-lg hover-scale">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-database text-3xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Data Backup & Recovery</h3>
+                    <p class="text-gray-300">Implementation of robust backup solutions and efficient data recovery procedures to protect critical information.</p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-cyan-400 mr-2"></i>
+                            Automated backups
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-cyan-400 mr-2"></i>
+                            Data restoration
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Server Maintenance -->
+                <div class="service-card bg-slate-700 p-6 rounded-lg hover-scale">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-server text-3xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Server Maintenance</h3>
+                    <p class="text-gray-300">Regular server monitoring and maintenance to ensure optimal performance, security, and reliability of systems.</p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-cyan-400 mr-2"></i>
+                            Performance monitoring
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-cyan-400 mr-2"></i>
+                            Security updates
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Remote Support -->
+                <div class="service-card bg-slate-700 p-6 rounded-lg hover-scale">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-laptop-house text-3xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Remote Support</h3>
+                    <p class="text-gray-300">Quick and efficient remote assistance using TeamViewer or AnyDesk for immediate problem resolution.</p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-cyan-400 mr-2"></i>
+                            Real-time assistance
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-cyan-400 mr-2"></i>
+                            Remote troubleshooting
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-slate-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Projects & Achievements</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Workstation Setup Project -->
+                <div class="bg-slate-700 rounded-lg shadow-lg overflow-hidden hover-scale">
+                    <img src="C:\Users\Biztech\Downloads\Professional-Website\portfolio-website\assets\images\projects\workstation.jpg" 
+                         alt="Setting Up Workstations" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Setting Up Workstations</h3>
+                        <p class="text-gray-300 mb-4">Configured and deployed 20+ workstations, implementing standardized software installations and security protocols for optimal workflow efficiency.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Hardware Setup</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">System Config</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hospital IT Upgrades -->
+                <div class="bg-slate-700 rounded-lg shadow-lg overflow-hidden hover-scale">
+                    <img src="C:\Users\Biztech\Downloads\Professional-Website\portfolio-website\assets\images\projects\hospital.jpg" 
+                         alt="Hospital IT Upgrades" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Hospital IT Upgrades</h3>
+                        <p class="text-gray-300 mb-4">Successfully upgraded 50+ systems and improved infrastructure, resulting in enhanced performance and reliability of hospital operations.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Infrastructure</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">System Upgrade</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Network Troubleshooting -->
+                <div class="bg-slate-700 rounded-lg shadow-lg overflow-hidden hover-scale">
+                    <img src="C:/Users/Biztech/Downloads/Professional-Website/portfolio-website/assets/images/projects/wifimaintenance.jfif" 
+                         alt="Troubleshooting Networks" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Troubleshooting Networks</h3>
+                        <p class="text-gray-300 mb-4">Resolved complex connectivity issues across multiple departments, ensuring seamless communication and data access.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Networking</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Troubleshooting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Server Management -->
+                <div class="bg-slate-700 rounded-lg shadow-lg overflow-hidden hover-scale">
+                    <img src="C:\Users\Biztech\Downloads\Professional-Website\portfolio-website\assets\images\projects\servermanagement.jpg" 
+                         alt="Server Management" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Server Management</h3>
+                        <p class="text-gray-300 mb-4">Implemented server maintenance protocols that reduced system downtime by 40% and improved overall performance.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Server Admin</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Performance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IT Exam Support -->
+                <div class="bg-slate-700 rounded-lg shadow-lg overflow-hidden hover-scale">
+                    <img src="C:/Users/Biztech/Downloads/Professional-Website/portfolio-website/assets/images/projects/exammonitoring.jfif" 
+                         alt="IT Exam Support" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">IT Exam Support</h3>
+                        <p class="text-gray-300 mb-4">Managed and monitored IT infrastructure during critical examination periods, ensuring zero technical disruptions.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Exam Support</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Network Infrastructure -->
+                <div class="bg-slate-700 rounded-lg shadow-lg overflow-hidden hover-scale">
+                    <img src="C:\Users\Biztech\Downloads\Professional-Website\portfolio-website\assets\images\projects\NetworkInfrastructure.jpg" 
+                         alt="Network Infrastructure" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Network Infrastructure</h3>
+                        <p class="text-gray-300 mb-4">Maintained and optimized Wi-Fi networks across multiple locations, ensuring consistent connectivity and coverage.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">WiFi</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Maintenance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section-padding bg-slate-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Latest IT Insights</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-slate-700 rounded-lg shadow-lg overflow-hidden hover-scale">
+                    <img src="C:\Users\Biztech\Downloads\Professional-Website\portfolio-website\assets\images\network-security.jpg" alt="Network Security Tips" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Essential Network Security Tips</h3>
+                        <p class="text-gray-300 mb-4">Learn about the best practices for maintaining a secure network infrastructure...</p>
+                        <a href="https://www.youtube.com/watch?v=ASbZevLGtcY" target="_blank" 
+                           class="bg-cyan-500 text-white px-4 py-2 rounded-full hover:bg-cyan-600 transition">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="bg-slate-700 rounded-lg shadow-lg overflow-hidden hover-scale">
+                    <img src="C:\Users\Biztech\Downloads\Professional-Website\portfolio-website\assets\images\data-backup.jpg" alt="Data Backup Guide" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Complete Data Backup Guide</h3>
+                        <p class="text-gray-300 mb-4">Discover the importance of regular backups and how to implement them effectively...</p>
+                        <a href="https://www.youtube.com/watch?v=kDYKLzm-EMo" target="_blank" 
+                           class="bg-cyan-500 text-white px-4 py-2 rounded-full hover:bg-cyan-600 transition">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="bg-slate-700 rounded-lg shadow-lg overflow-hidden hover-scale">
+                    <img src="C:\Users\Biztech\Downloads\Professional-Website\portfolio-website\assets\images\remote-work.png" alt="Remote Work Solutions" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Remote Work IT Solutions</h3>
+                        <p class="text-gray-300 mb-4">Explore the best tools and practices for supporting remote work environments...</p>
+                        <a href="https://www.youtube.com/watch?v=8cF442d-EdQ" target="_blank" 
+                           class="bg-cyan-500 text-white px-4 py-2 rounded-full hover:bg-cyan-600 transition">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding bg-slate-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">What People Say</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Madadeni Hospital Review 1 -->
+                <div class="testimonial-card bg-slate-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="star-rating text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-300">5.0</span>
+                    </div>
+                    <p class="testimonial-text text-gray-300 mb-4">"Mbuyiseni demonstrated exceptional technical expertise in maintaining our hospital's IT infrastructure. His quick problem-solving skills significantly reduced system downtimes."</p>
+                    <div class="testimonial-author">
+                        <h4 class="font-semibold">F. Mahlangu</h4>
+                        <p class="testimonial-role">IT Technician, Madadeni Hospital</p>
+                    </div>
+                </div>
+
+                <!-- Majuba TVET College Review -->
+                <div class="testimonial-card bg-slate-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="star-rating text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-300">4.0</span>
+                    </div>
+                    <p class="testimonial-text text-gray-300 mb-4">"His dedication to improving our training systems and implementing efficient learning solutions was invaluable. A reliable professional who consistently delivers."</p>
+                    <div class="testimonial-author">
+                        <h4 class="font-semibold">S. Mkhize</h4>
+                        <p class="testimonial-role">ICT Trainer, Majuba TVET College</p>
+                    </div>
+                </div>
+
+                <!-- Madadeni Hospital Review 2 -->
+                <div class="testimonial-card bg-slate-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="star-rating text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="ml-2 text-gray-300">4.5</span>
+                    </div>
+                    <p class="testimonial-text text-gray-300 mb-4">"Exceptional service in maintaining our quality assurance systems. His technical knowledge and attention to detail have greatly improved our operations."</p>
+                    <div class="testimonial-author">
+                        <h4 class="font-semibold">T. Gamede</h4>
+                        <p class="testimonial-role">Quality Assurance Manager, Madadeni Hospital</p>
+                    </div>
+                </div>
+
+                <!-- Majuba TVET College Review 2 -->
+                <div class="testimonial-card bg-slate-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="star-rating text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-300">4.0</span>
+                    </div>
+                    <p class="testimonial-text text-gray-300 mb-4">"A highly skilled professional who helped streamline our educational technology resources. His solutions have made a significant impact on our operations."</p>
+                    <div class="testimonial-author">
+                        <h4 class="font-semibold">F. Hlongwane</h4>
+                        <p class="testimonial-role">Majuba TVET College</p>
+                    </div>
+                </div>
+
+                <!-- Majuba TVET College Review 3 -->
+                <div class="testimonial-card bg-slate-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="star-rating text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-300">5.0</span>
+                    </div>
+                    <p class="testimonial-text text-gray-300 mb-4">"Exceptional problem-solving abilities and a great team player. His implementation of our training systems greatly improved our digital learning environment."</p>
+                    <div class="testimonial-author">
+                        <h4 class="font-semibold">Z. Dlamini</h4>
+                        <p class="testimonial-role">ICT Trainer, Majuba TVET College</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-slate-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Get In Touch</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div class="bg-slate-700 p-6 rounded-lg">
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-300 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-2 rounded-lg border focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-2 rounded-lg border focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required
+                                      class="w-full px-4 py-2 rounded-lg border focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-cyan-600 text-white py-2 rounded-lg hover:bg-cyan-700 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-envelope text-cyan-400 text-xl"></i>
+                        <div>
+                            <h3 class="font-semibold">Email</h3>
+                            <p class="text-gray-300">tizzynas100@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-phone text-cyan-400 text-xl"></i>
+                        <div>
+                            <h3 class="font-semibold">Phone</h3>
+                            <p class="text-gray-300">0847317661</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="https://www.facebook.com/profile.php?id=100069121120026" target="_blank" class="text-cyan-400 hover:text-cyan-600 text-2xl" aria-label="Facebook Profile">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mbuyiseni-cele-7384b12a4/" target="_blank" class="text-cyan-400 hover:text-cyan-600 text-2xl" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/sbongambuyiseni" target="_blank" class="text-cyan-400 hover:text-cyan-600 text-2xl" aria-label="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/djtizzy_012" target="_blank" class="text-cyan-400 hover:text-cyan-600 text-2xl" aria-label="Instagram Profile">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-gray-300 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-cyan-200">Home</a></li>
+                        <li><a href="#about" class="hover:text-cyan-200">About</a></li>
+                        <li><a href="#services" class="hover:text-cyan-200">Services</a></li>
+                        <li><a href="#contact" class="hover:text-cyan-200">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-cyan-200">IT Support</a></li>
+                        <li><a href="#" class="hover:text-cyan-200">Network Solutions</a></li>
+                        <li><a href="#" class="hover:text-cyan-200">Data Backup</a></li>
+                        <li><a href="#" class="hover:text-cyan-200">Server Maintenance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-envelope mr-2"></i> tizzynas100@gmail.com</li>
+                        <li><i class="fas fa-phone mr-2"></i> 0847317661</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Follow Me</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=100069121120026" target="_blank" class="hover:text-cyan-200" aria-label="Facebook Profile">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mbuyiseni-cele-7384b12a4/" target="_blank" class="hover:text-cyan-200" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="https://github.com/sbongambuyiseni" target="_blank" class="hover:text-cyan-200" aria-label="GitHub Profile">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/djtizzy_012" target="_blank" class="hover:text-cyan-200" aria-label="Instagram Profile">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-8 border-t border-cyan-500">
+                <p>&copy; 2024 Mbuyiseni Cele. All rights reserved.</p>
+            </div>
+        </div>
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="fixed bottom-8 right-8 bg-cyan-700 text-white p-4 rounded-full shadow-lg hover:bg-cyan-800 transition hidden">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/form-handler.js"></script>
+</body>
+</html>

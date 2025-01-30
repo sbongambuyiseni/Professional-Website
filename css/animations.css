@@ -1,0 +1,278 @@
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide in animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Utility classes for animations */
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Hover animations */
+.hover-scale {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+    animation: pulse 0.5s ease-in-out infinite;
+}
+
+/* TechWave Theme - Animations */
+
+/* Glitch effect */
+@keyframes glitch {
+    0% {
+        clip-path: inset(50% 0 30% 0);
+        transform: translate(-5px, 5px);
+    }
+    20% {
+        clip-path: inset(15% 0 65% 0);
+        transform: translate(5px, -5px);
+    }
+    40% {
+        clip-path: inset(80% 0 5% 0);
+        transform: translate(-5px, 5px);
+    }
+    60% {
+        clip-path: inset(25% 0 60% 0);
+        transform: translate(5px, -5px);
+    }
+    80% {
+        clip-path: inset(70% 0 20% 0);
+        transform: translate(-5px, 5px);
+    }
+    100% {
+        clip-path: inset(50% 0 30% 0);
+        transform: translate(0);
+    }
+}
+
+.glitch-text {
+    position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--primary);
+    animation: glitch 0.3s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+    left: -2px;
+    text-shadow: 2px 0 var(--secondary);
+    animation: glitch 0.3s infinite linear alternate;
+}
+
+/* Ripple effect */
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 1s linear infinite;
+}
+
+/* Matrix rain effect */
+@keyframes matrixRain {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+        color: var(--primary);
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+        color: var(--secondary);
+    }
+}
+
+.matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.matrix-character {
+    position: absolute;
+    color: var(--primary);
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    line-height: 1;
+    animation: matrixRain 2s linear infinite;
+}
+
+/* Hover glow effect */
+.hover-glow {
+    transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px var(--primary);
+    color: var(--light);
+}
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--primary);
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary) }
+}
+
+/* Enhanced animations */
+@keyframes neonPulse {
+    0% {
+        text-shadow: 0 0 10px var(--neon),
+                     0 0 20px var(--neon),
+                     0 0 30px var(--neon);
+    }
+    100% {
+        text-shadow: 0 0 20px var(--neon),
+                     0 0 30px var(--neon),
+                     0 0 40px var(--neon);
+    }
+}
+
+.neon-text {
+    animation: neonPulse 1.5s ease-in-out infinite alternate;
+}
+
+/* Card entrance animation */
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.card-animate {
+    animation: cardEntrance 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Border animation */
+@keyframes borderGlow {
+    0% {
+        border-color: var(--primary);
+        box-shadow: 0 0 10px var(--primary);
+    }
+    50% {
+        border-color: var(--secondary);
+        box-shadow: 0 0 20px var(--secondary);
+    }
+    100% {
+        border-color: var(--primary);
+        box-shadow: 0 0 10px var(--primary);
+    }
+}
+
+.border-animate {
+    animation: borderGlow 3s infinite;
+}
+
+/* New Cyberpunk-inspired animations */
+@keyframes neonFlicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 
+            0 0 5px var(--primary),
+            0 0 15px var(--primary),
+            0 0 30px var(--primary);
+    }
+    20%, 22%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* New floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+} 
